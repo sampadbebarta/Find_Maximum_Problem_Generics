@@ -1,18 +1,27 @@
 package com.bridgelabz;
 
-public class MaximumNumber {
-    public static void main(String[] args) {
-        System.out.println("Welcome Find Maximum Number Problem");
+import java.util.Arrays;
+import java.util.Collections;
+
+public class CheckMaximumValue<E extends Comparable> {
+    E[] arrElements;
+
+    public CheckMaximumValue(E[] arrElements) {
+        this.arrElements = arrElements;
     }
 
-    public Integer findMaxIntegerValue(Integer first, Integer second, Integer third) {
-
-        Integer maximumIntegerNumber = first;
-        if (second.compareTo(maximumIntegerNumber) > 0)
-            maximumIntegerNumber = second;
-        if (third.compareTo(maximumIntegerNumber) > 0)
-            maximumIntegerNumber = third;
-        return maximumIntegerNumber;
+    public static <E extends Comparable> E findMaxValue(E... arrElements) {
+        Arrays.sort(arrElements, Collections.reverseOrder());
+        return arrElements[0];
     }
 
+    public E findMaxValue() {
+        E result = findMaxValue(arrElements);
+        printMax(result);
+        return result;
+    }
+
+    private static <E> void printMax(E result) {
+        System.out.println(result);
+    }
 }
