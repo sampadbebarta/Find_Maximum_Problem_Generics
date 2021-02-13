@@ -3,10 +3,10 @@ package com.bridgelabz;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class CheckMaximumValue<E extends Comparable> {
+public class MaximumNumber<E extends Comparable> {
     E[] arrElements;
 
-    public CheckMaximumValue(E[] arrElements) {
+    public MaximumNumber(E[] arrElements) {
         this.arrElements = arrElements;
     }
 
