@@ -7,12 +7,29 @@ public class MaximumNumber {
 
     public Integer findMaxIntegerValue(Integer first, Integer second, Integer third) {
 
-        Integer maximumIntegerNumber = first;
-        if (second.compareTo(maximumIntegerNumber) > 0)
-            maximumIntegerNumber = second;
-        if (third.compareTo(maximumIntegerNumber) > 0)
-            maximumIntegerNumber = third;
-        return maximumIntegerNumber;
+        Integer maximumNumber = first;
+        if (second.compareTo(maximumNumber) > 0)
+            maximumNumber = second;
+        if (third.compareTo(maximumNumber) > 0)
+            maximumNumber = third;
+        return maximumNumber;
     }
 
+    public Float findMaxFloatValue(Float firstNo, Float secondNo, Float thirdNo) {
+        Float maximumFloatNumber = firstNo;
+        if (secondNo.compareTo(maximumFloatNumber) > 0.0)
+            maximumFloatNumber = secondNo;
+        if (thirdNo.compareTo(maximumFloatNumber) > 0.0)
+            maximumFloatNumber = thirdNo;
+        return maximumFloatNumber;
+    }
+
+    public String findMaxString(String firstString, String secondString, String thirdString) {
+        String  maximumString = firstString;
+        if (secondString.compareTo(maximumString) > 0)
+            maximumString = secondString;
+        if (thirdString.compareTo(maximumString) > 0)
+            maximumString = thirdString;
+        return maximumString;
+    }
 }
